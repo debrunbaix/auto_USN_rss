@@ -1,0 +1,2 @@
+USN-6563-1: Thunderbird vulnerabilities
+USN-6562-1: Firefox vulnerabilities
