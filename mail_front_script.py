@@ -18,7 +18,7 @@ content_start = f'''
     <div id="email">
         <table role="presentation" width="100%">
             <tr>
-                <td bgcolor="#8F43EE" align="center" style="color:#413543;">
+                <td bgcolor="#e95420" align="center" style="color:#e95420;">
                     <h1> Ubuntu Security News !</h1>
                 </td>
     '''

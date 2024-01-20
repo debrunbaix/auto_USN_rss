@@ -11,7 +11,6 @@ SMTP_SERVER = config.get('Mail_Config', 'SMTP_SERVER')
 SMTP_PORT = config.get('Mail_Config', 'SMTP_PORT')
 GMAIL_USERNAME = config.get('Mail_Config', 'GMAIL_USERNAME')
 GMAIL_PASSWORD = config.get('Mail_Config', 'GMAIL_PASSWORD')
-print(GMAIL_PASSWORD)
 
 def sendmail(content):
 
