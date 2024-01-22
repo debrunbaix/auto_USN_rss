@@ -1,13 +1,16 @@
 import feedparser
-from time import sleep
+from time import sleep, localtime, strftime
 from mail_front_script import create_mail_content
 from send_mail_script import sendmail
 
 article_file = "article.txt"
-
-# article_date = blog_feed.entries[0].published
+log_file = "log.txt"
 
 article_to_send = []
+
+def write_in_file(text, file):
+    with open(file, 'a') as file_to_write:
+        file_to_write.write(text + '\n')
 
 def check_article_sent_status(article):
     with open(article_file, 'r') as file:
@@ -16,9 +19,9 @@ def check_article_sent_status(article):
         if article_title in file_content:
             return True
         else:
-            with open(article_file, 'a') as file_to_write:
-                file_to_write.write(article_title + '\n')
-                print(f'Article {article.title} added.')
+            write_in_file(article_title, article_file)
+            print(f'Article {article.title} added.')
+            write_in_file(f'Article {article.title} added.', log_file)
             return False
 
 def update_rss_article():
@@ -37,8 +40,11 @@ def main():
         mail_content = create_mail_content(article_to_send)
         sendmail(mail_content)
     else:
-        print('No mail send')
+        time_string = strftime("%m/%d/%Y, %H:%M:%S", localtime())
+        print(f'No mail send at : {time_string}')
+        write_in_file(f'No mail send at : {time_string}', log_file)
 
 while True:
     main()
+    article_to_send = []
     sleep(3600)

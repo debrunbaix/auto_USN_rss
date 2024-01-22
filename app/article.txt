@@ -1,0 +1,8 @@
+USN-6563-1: Thunderbird vulnerabilities
+USN-6562-1: Firefox vulnerabilities
+USN-6590-1: Xerces-C++ vulnerabilities
+USN-6589-1: FileZilla vulnerability
+USN-6588-1: PAM vulnerability
+USN-6538-2: PostgreSQL vulnerabilities
+USN-6559-1: ZooKeeper vulnerabilities
+USN-6587-1: X.Org X Server vulnerabilities

@@ -1,4 +1,4 @@
-config.ini
+app/config.ini
 __pycache__
 TODO.md
 venv/
